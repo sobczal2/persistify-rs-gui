@@ -1,4 +1,5 @@
 {
+  "$schema": "../node_modules/@tauri-apps/cli/schema.json",
   "build": {
     "beforeBuildCommand": "npm run build",
     "beforeDevCommand": "npm run dev",
@@ -6,15 +7,12 @@
     "distDir": "../build"
   },
   "package": {
-    "productName": "Picturify",
+    "productName": "picturify-rs-gui",
     "version": "0.1.0"
   },
   "tauri": {
     "allowlist": {
-      "dialog": {
-        "open": true,
-        "save": true
-      }
+      "all": false
     },
     "bundle": {
       "active": true,
@@ -31,7 +29,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.picturify",
+      "identifier": "com.tauri.dev",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
@@ -59,7 +57,7 @@
       {
         "fullscreen": false,
         "height": 600,
-        "resizable": false,
+        "resizable": true,
         "title": "Picturify",
         "width": 800
       }
